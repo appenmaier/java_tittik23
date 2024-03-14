@@ -1,6 +1,9 @@
 package main;
 
+import static java.lang.StringTemplate.STR;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class D01_JavaBasics {
 
@@ -35,6 +38,42 @@ public class D01_JavaBasics {
     System.out.println("i1: " + i1);
     System.out.println("result7: " + result7);
     System.out.println("randomNumber: " + randomNumber);
+  }
+
+  public static void arrays() {
+    String[] names = new String[3]; // C/C++: String names[3];
+    int[] numbers = {6, 4, 2, -1, 6};
+
+    names[1] = "Max";
+    names[names.length - 1] = "Lisa";
+    names[0] = "Peter";
+
+    for (int i = 0; i < numbers.length; i++) {
+      int number = numbers[i];
+      System.out.println(number);
+    }
+
+    for (String name : names) {
+      System.out.println(name);
+    }
+
+    ArrayList<String> names2 = new ArrayList<>();
+
+    names2.add("Max");
+    names2.add("Lisa");
+    names2.add("Peter");
+    names2.add(1, "Fritz");
+    names2.remove("Max");
+    names2.remove(2);
+
+    int numberOfNames = names2.size();
+
+    for (int i = 0; i < names2.size(); i++) {
+      System.out.println(names2.get(i));
+    }
+
+    System.out.println("numberOfNames: " + numberOfNames);
+
   }
 
   public static void cases() {
@@ -91,6 +130,36 @@ public class D01_JavaBasics {
 
   }
 
+  public static void io() {
+    Scanner myScanner = new Scanner(System.in);
+
+    // System.out.print("Ganze Zahl: ");
+    // int int1 = myScanner.nextInt();
+    //
+    // System.out.print("Kommazahl: ");
+    // double double1 = myScanner.nextDouble();
+    //
+    // System.out.print("Wahrheitswert: ");
+    // boolean boolean1 = myScanner.nextBoolean();
+    //
+    // System.out.print("Zeichen: ");
+    // char char1 = myScanner.next().charAt(0);
+    //
+    // System.out.print("Vollständiger Name: ");
+    // String fullName = myScanner.next();
+    //
+    // System.out.println("int1: " + int1);
+    // System.out.println("double1: " + double1);
+    // System.out.println("boolean1: " + boolean1);
+    // System.out.println("char1: " + char1);
+    // System.out.println("fullName: " + fullName);
+
+    double d = 5 / 3.0;
+    System.out.println("d: " + d);
+    System.out.print("d: " + d + "\n");
+    System.out.printf("d: %.2f%n", d);
+  }
+
   public static void loops() {
     int i = 0;
     while (i < 10) {
@@ -130,6 +199,17 @@ public class D01_JavaBasics {
     loops();
     System.out.println();
 
+    /* Zeichenketten */
+    strings();
+    System.out.println();
+
+    /* Konsoleneingabe und -ausgabe */
+    io();
+    System.out.println();
+
+    /* Felder (Arrays) */
+    arrays();
+
   }
 
   public static void primitiveDatatypes() {
@@ -155,6 +235,29 @@ public class D01_JavaBasics {
     System.out.println("a2: " + a2);
     System.out.println("a3: " + a3);
     System.out.println("a4: " + a4);
+  }
+
+  public static void strings() {
+    String name = "Max"; // new String("Max"); C: char name[] = "Max";
+
+    int length = name.length(); // C: int length = strlen(name);
+    String fullName = name + " Maier"; // C/C++: strcat(name, " Maier");
+
+    if (fullName.equals("Max Maier")) {
+      System.out.println("beide Objekt sind gleich");
+    }
+    if (fullName == "Max Maier") {
+      System.out.println("beide Objekte sind identisch");
+    }
+
+    char charAt6 = fullName.charAt(6);
+
+    System.out.println("length: " + length);
+    System.out.println("fullName: " + fullName);
+    System.out.println("charAt6: " + charAt6);
+
+    String text = STR."length: \{length}";
+    System.out.println(text);
   }
 
 }
