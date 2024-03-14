@@ -1,6 +1,5 @@
 package main;
 
-import static java.lang.StringTemplate.STR;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -130,29 +129,30 @@ public class D01_JavaBasics {
 
   }
 
+  @SuppressWarnings("resource")
   public static void io() {
     Scanner myScanner = new Scanner(System.in);
 
-    // System.out.print("Ganze Zahl: ");
-    // int int1 = myScanner.nextInt();
-    //
-    // System.out.print("Kommazahl: ");
-    // double double1 = myScanner.nextDouble();
-    //
-    // System.out.print("Wahrheitswert: ");
-    // boolean boolean1 = myScanner.nextBoolean();
-    //
-    // System.out.print("Zeichen: ");
-    // char char1 = myScanner.next().charAt(0);
-    //
-    // System.out.print("Vollständiger Name: ");
-    // String fullName = myScanner.next();
-    //
-    // System.out.println("int1: " + int1);
-    // System.out.println("double1: " + double1);
-    // System.out.println("boolean1: " + boolean1);
-    // System.out.println("char1: " + char1);
-    // System.out.println("fullName: " + fullName);
+    System.out.print("Ganze Zahl: ");
+    int int1 = myScanner.nextInt();
+
+    System.out.print("Kommazahl: ");
+    double double1 = myScanner.nextDouble();
+
+    System.out.print("Wahrheitswert: ");
+    boolean boolean1 = myScanner.nextBoolean();
+
+    System.out.print("Zeichen: ");
+    char char1 = myScanner.next().charAt(0);
+
+    System.out.print("Vollständiger Name: ");
+    String fullName = myScanner.next();
+
+    System.out.println("int1: " + int1);
+    System.out.println("double1: " + double1);
+    System.out.println("boolean1: " + boolean1);
+    System.out.println("char1: " + char1);
+    System.out.println("fullName: " + fullName);
 
     double d = 5 / 3.0;
     System.out.println("d: " + d);
@@ -255,9 +255,6 @@ public class D01_JavaBasics {
     System.out.println("length: " + length);
     System.out.println("fullName: " + fullName);
     System.out.println("charAt6: " + charAt6);
-
-    String text = STR."length: \{length}";
-    System.out.println(text);
   }
 
 }
