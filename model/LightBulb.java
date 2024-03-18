@@ -10,8 +10,15 @@ package model;
 public class LightBulb {
 
   /* Attribute */
-  public String color;
+  private String color;
 
   /* Methoden */
+  public LightBulb(String color) {
+    this.color = color;
+  }
+
+  public String getColor() {
+    return color;
+  }
 
 }

@@ -10,9 +10,9 @@ package model;
 public class TableLight {
 
   /* Attribute */
-  public boolean isOn;
-  public boolean isConnected;
-  public LightBulb lightBulb;
+  private boolean isOn;
+  private boolean isConnected;
+  private LightBulb lightBulb;
 
   /* Methoden */
   /**
@@ -69,6 +69,18 @@ public class TableLight {
     // }
 
     return isOn && isConnected && lightBulb != null;
+  }
+
+  public boolean isOn() {
+    return isOn;
+  }
+
+  public boolean isConnected() {
+    return isConnected;
+  }
+
+  public LightBulb getLightBulb() {
+    return lightBulb;
   }
 
 }
