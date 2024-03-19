@@ -4,7 +4,7 @@ package model;
  * Tischleuchte
  *
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
 public class TableLight {
@@ -16,28 +16,28 @@ public class TableLight {
 
   /* Methoden */
   /**
-   * Schaltet die Leuchte ein
+   * Schaltet die Tischleuchte ein
    */
   public void switchOn() {
     isOn = true;
   }
 
   /**
-   * Schaltet die Leuchte aus
+   * Schaltet die Tischleuchte aus
    */
   public void switchOff() {
     isOn = false;
   }
 
   /**
-   * Steckt die Leuchte ein
+   * Steckt die Tischleuchte ein
    */
   public void plugIn() {
     isConnected = true;
   }
 
   /**
-   * Steckt die Leuchte aus
+   * Steckt die Tischleuchte aus
    */
   public void pullThePlug() {
     isConnected = false;
@@ -56,18 +56,12 @@ public class TableLight {
     return oldLightBulb;
   }
 
-  /**
-   * Leuchtet die Leuchte?
-   *
-   * @return Leuchte leuchtet
-   */
   public boolean isShining() {
     // if (isOn == true && isConnected == true && lightBulb != null) {
     // return true;
     // } else {
     // return false;
     // }
-
     return isOn && isConnected && lightBulb != null;
   }
 

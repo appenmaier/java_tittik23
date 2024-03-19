@@ -4,13 +4,13 @@ package model;
  * Glühbirne
  *
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
 public class LightBulb {
 
   /* Attribute */
-  private String color;
+  private final String color;
 
   /* Methoden */
   public LightBulb(String color) {

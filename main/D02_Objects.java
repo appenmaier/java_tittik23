@@ -22,12 +22,17 @@ public class D02_Objects {
     tableLight1.changeLightBulb(blueLightBulb);
 
     boolean isShining = tableLight1.isShining();
-    LightBulb lightBulb = tableLight1.getLightBulb();
-    String color = lightBulb.getColor();
-    System.out.println(isShining ? "Die Leuchte leuchtet in der Farbe " + color : "Dunkel");
-    System.out.println(
-        isShining ? "Die Leuchte leuchtet in der Farbe " + tableLight1.getLightBulb().getColor()
-            : "Dunkel");
+
+    // LightBulb lightBulb = tableLight1.getLightBulb();
+    // String color = lightBulb.getColor();
+    // if (isShining) {
+    // System.out.println("Die Tischleuchte leuchtet in der Farbe " + color);
+    // } else {
+    // System.out.println("Die Tischleuchte leuchtet nicht");
+    // }
+    System.out.println(isShining
+        ? "Die Tischleuchte leuchtet in der Farbe " + tableLight1.getLightBulb().getColor()
+        : "Die Tischleuchte leuchtet nicht");
 
   }
 
