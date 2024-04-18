@@ -13,8 +13,21 @@ public class TableLight {
   private boolean isOn;
   private boolean isConnected;
   private LightBulb lightBulb;
+  private final PlugType plugType;
+
+  public PlugType getPlugType() {
+    return plugType;
+  }
 
   /* Methoden */
+  public TableLight(PlugType plugType) {
+    this.plugType = plugType;
+  }
+
+  public TableLight() {
+    plugType = PlugType.TYPE_F;
+  }
+
   /**
    * Schaltet die Tischleuchte ein
    */
@@ -75,6 +88,12 @@ public class TableLight {
 
   public LightBulb getLightBulb() {
     return lightBulb;
+  }
+
+  @Override
+  public String toString() {
+    return "TableLight [isOn=" + isOn + ", isConnected=" + isConnected + ", lightBulb=" + lightBulb
+        + ", plugType=" + plugType + "]";
   }
 
 }

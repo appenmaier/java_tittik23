@@ -11,12 +11,12 @@ public class Pet {
 
   /* Attribute */
   private final String name;
-  private final String type;
+  private final PetType type;
   private int age;
   private double weightInKg;
 
   /* Methoden */
-  public Pet(String name, String type, double weightInKg) {
+  public Pet(String name, PetType type, double weightInKg) {
     this.name = name;
     this.type = type;
     this.weightInKg = weightInKg;
@@ -41,7 +41,7 @@ public class Pet {
     return name;
   }
 
-  public String getType() {
+  public PetType getType() {
     return type;
   }
 
