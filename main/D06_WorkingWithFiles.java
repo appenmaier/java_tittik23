@@ -36,6 +36,7 @@ public class D06_WorkingWithFiles {
       Pet pet = new Pet(name, type, weightInKg);
       pets.add(pet);
     }
+    scanner.close();
 
     for (Pet p : pets) {
       System.out.println(p);

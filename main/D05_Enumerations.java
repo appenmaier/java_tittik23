@@ -17,6 +17,10 @@ public class D05_Enumerations {
     PlugType type2 = PlugType.TYPE_F;
     PlugType type3 = PlugType.TYPE_B;
 
+    System.out.println(type1);
+    System.out.println(type2);
+    System.out.println(type3);
+
   }
 
 }

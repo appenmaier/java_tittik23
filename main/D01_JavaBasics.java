@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Grundlegende Sprachelemente
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class D01_JavaBasics {
 
   public static void arithmeticOperations() {
