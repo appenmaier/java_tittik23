@@ -1,6 +1,8 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import model.FlashLight;
 import model.Light;
 import model.TableLight;
@@ -16,11 +18,12 @@ import model.WiredDevice;
  */
 public class D07_Inheritance {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
     /* Ansatz ohne Vererbung */
-    ArrayList<TableLight> tableLights = new ArrayList<>();
-    ArrayList<FlashLight> flashLights = new ArrayList<>();
+    List<TableLight> tableLights = new ArrayList<>();
+    List<FlashLight> flashLights = new LinkedList<>();
 
     tableLights.add(new TableLight());
     tableLights.add(new TableLight());
@@ -83,6 +86,10 @@ public class D07_Inheritance {
       System.out.println(w);
 
     }
+
+    List<Light> lights2 = List.of(new TableLight(), new FlashLight(), new TableLight(),
+        new TableLight(), new TableLight(), new TableLight(), new TableLight(), new TableLight(),
+        new TableLight(), new TableLight(), new TableLight());
 
   }
 
