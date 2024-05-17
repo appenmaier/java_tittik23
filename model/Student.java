@@ -44,4 +44,8 @@ public record Student(String id, String name, Map<String, Double> grades)
     return name.compareTo(o.name);
   }
 
+  public void greet() {
+    System.out.println("Hallo, mein Name ist " + name);
+  }
+
 }
