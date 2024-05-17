@@ -21,9 +21,9 @@ public class D09_Maps {
 
     try {
       student.setGrade("Programmieren", 2.3);
-      student.setGrade("Mathematik 1", 0.0);
+      student.setGrade("Mathematik 1", 2.8);
       student.setGrade("NT", 3.5);
-      student.setGrade("Programmieren", -2.2);
+      student.setGrade("Programmieren", 2.2);
     } catch (InvalidGradeException e) {
       System.out.println(e.getMessage());
     }
@@ -39,6 +39,7 @@ public class D09_Maps {
     System.out.println();
 
     System.out.println(student.grades());
+    System.out.println();
 
     Map<Student, String> students = new TreeMap<>();
     students.put(new Student("1827432", "Hans", new HashMap<>()), "TIA23");
